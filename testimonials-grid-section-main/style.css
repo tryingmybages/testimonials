@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr repeat(4,minmax(250px,300px)) 1fr ;
+    grid-template-rows: auto 350px 300px auto;
+    gap: 30px;
+}
+.con{
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #eee;
+    box-shadow: -2px 0px 19px 20px #62606011;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.flex-row{
+   display: flex; 
+   flex-direction: row;
+   align-items: center;
+   justify-items: center;
+   margin-bottom: 20px;
+   
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+
+}
+.circle{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 20px;
+}
+.verified{
+    font-size: 12px;
+    color:#c9cbcc;
+    z-index: 2;
+}
+.bold{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+    z-index: 2;
+    position: relative;
+}
+.normal{
+    font-size: 14px;
+    line-height: 1.5;
+    color:#c9cbcc ;
+}
+.one{
+    grid-area: 2/2/3/4;
+    background-color: #733fc8;
+    position: relative;
+
+}
+.one::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url(testimonials-grid-section-main/images/bg-pattern-quotation.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 20%;
+    top: 0;
+    z-index: 0;
+    opacity: 0.8;
+}
+.two{
+    grid-area: 2/4/3/5;
+    background-color: #49556b;
+}
+.three{
+    grid-area: 2/5/4/6;
+    background-color: white;
+}
+.four{
+    grid-area: 3/2/4/3;
+    background-color: white;
+
+}
+.five{
+    grid-area: 3/3/4/5;
+    background-color: #18202d;
+}
+.white{
+    color: white;
+    z-index: 2;
+}
+.a{
+    background-image: url(testimonials-grid-section-main/images/image-daniel.jpg);
+    background-size: cover;
+}
+.b{
+    background-image: url(testimonials-grid-section-main/images/image-jonathan.jpg);
+    background-size: cover;
+}
+.c{
+    background-image: url(testimonials-grid-section-main/images/image-kira.jpg);
+    background-size: cover;
+}
+.d{
+    background-image: url(testimonials-grid-section-main/images/image-jeanette.jpg);
+    background-size: cover;
+}
+.e{
+    background-image: url(testimonials-grid-section-main/images/image-patrick.jpg);
+    background-size: cover;
+}
+@media (max-width:1160px) {
+    .container{
+        grid-template-columns: 1fr repeat(3,minmax(220px,300px)) 1fr ;
+        grid-template-rows:auto 350px 300px 300px auto; 
+    }
+    .one{
+        grid-area: 2/2/3/4; 
+    }
+    .two{
+        grid-area: 2/4/3/5;
+    }
+    .three{
+        grid-area: 3/2/4/5;
+    }
+    .four{
+        grid-area: 4/2/5/3;
+    
+    }
+    .five{
+        grid-area: 4/3/5/5;
+    }
+}
+@media (max-width:787px) {
+    .container{
+        margin: 60px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .one::before{
+        right: 10%;
+    }
+    .con{
+        max-width: 80%;
+        min-width: 250px;
+        box-shadow: 3px 3px 16px 6px #c3b7b74f;
+    }
+}
